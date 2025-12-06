@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+    - id: packer_fmt
+      name: Packer Format
+      language: system
+      entry: packer fmt .
+      pass_filenames: false
+
+    - id: packer_validate
+      name: Packer Validate
+      language: system
+      entry: packer validate . 
+      pass_filenames: false
